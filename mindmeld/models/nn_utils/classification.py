@@ -408,7 +408,7 @@ class BaseClassification(nn_module):
         embedder_type = params.get("embedder_type")
         if EmbedderType(embedder_type) == EmbedderType.GLOVE:
             # load glove embs
-            token_dimension = params.get("embedder_type", 300)
+            token_dimension = params.get("token_dimension", 300)
             token_pretrained_embedding_filepath = params.get("token_pretrained_embedding_filepath")
             glove_container = GloVeEmbeddingsContainer(
                 token_dimension=token_dimension,
